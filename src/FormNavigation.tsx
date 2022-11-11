@@ -1,23 +1,18 @@
-import { Formik, FormikValues } from 'formik';
-import { Button } from '@chakra-ui/react';
-import React from 'react';
+import { FormikValues } from 'formik';
+import React from 'react'
+import { Button, Center, Flex } from '@chakra-ui/react';
 
 interface Props {
     hasPrevious?: boolean;
     onBackClick: (values: FormikValues) => void;
-    isLastStep?: boolean;
+    isLastStep: boolean;
 }
 
 const FormNavigation = (props: Props) => {
-
     return (
-        <div>
-            {props.hasPrevious && (
-            <Button onClick={props.onBackClick}>Back</Button>
-            )}
-
-            <Button type="submit">{props.isLastStep ? 'Submit' : 'Next'}</Button>
-        </div>
+        <Center>
+            <Button type="submit" width='350px' borderRadius='100px' mt='6' bgGradient='linear(to-r, #9836ef, #3654fb)' color='white'>{props.isLastStep ? 'Submit' : 'Next →'}</Button>
+        </Center>
     )
 }
 
