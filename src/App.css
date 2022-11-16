@@ -35,3 +35,13 @@
     transform: rotate(360deg);
   }
 }
+
+.chakra-checkbox__control {
+  display: none!important;
+}
+
+.chakra-checkbox {
+  margin-left: 0;
+  align-items: center!important;
+  text-align: center!important;
+}
